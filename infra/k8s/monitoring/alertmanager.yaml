@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+  namespace: soulsync
+data:
+  alertmanager.yml: |
+    route:
+      receiver: default
+    receivers:
+      - name: default
+

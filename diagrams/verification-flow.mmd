@@ -1,0 +1,23 @@
+sequenceDiagram
+  participant User
+  participant Mobile
+  participant Backend
+  participant AI
+  participant Admin
+  User->>Mobile: Register
+  Mobile->>Backend: Account details
+  Backend-->>Mobile: Tokens + OTP challenges
+  User->>Mobile: Submit OTP/email code
+  Mobile->>Backend: Verify phone/email
+  User->>Mobile: Upload media
+  Mobile->>Backend: Register media URL
+  Backend->>AI: Analyze image
+  AI-->>Backend: Trust score + flags
+  User->>Mobile: Capture selfie and ID
+  Mobile->>Backend: Submit verification
+  Backend->>AI: Liveness, OCR, face match
+  AI-->>Backend: Verification score
+  Backend->>Admin: Queue suspicious items
+  Admin->>Backend: Review decision
+  Backend-->>Mobile: Matching eligible
+

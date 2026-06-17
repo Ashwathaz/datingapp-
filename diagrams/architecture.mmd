@@ -1,0 +1,17 @@
+flowchart LR
+  Mobile[Flutter Android/iOS] --> API[NestJS Backend API]
+  Admin[React Admin] --> API
+  API --> DB[(PostgreSQL)]
+  API --> Redis[(Redis)]
+  API --> MQ[(RabbitMQ)]
+  API --> Search[(Elasticsearch)]
+  API --> Object[(MinIO)]
+  API --> AI[FastAPI AI Service]
+  AI --> Models[OpenCV / InsightFace / DeepFace / YOLO / TensorFlow]
+  API <--> Socket[Socket.IO Chat]
+  Mobile <--> Socket
+  API --> Prom[Prometheus]
+  AI --> Prom
+  Prom --> Grafana[Grafana]
+  Logs[Loki] --> Grafana
+

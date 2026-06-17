@@ -1,0 +1,19 @@
+erDiagram
+  USERS ||--|| PROFILES : owns
+  USERS ||--o{ AUTH_SESSIONS : authenticates
+  USERS ||--o{ USER_VERIFICATIONS : completes
+  USERS ||--o{ MEDIA_ASSETS : uploads
+  USERS ||--|| TRUST_SCORES : earns
+  USERS ||--o{ DISCOVERY_ACTIONS : acts
+  USERS ||--o{ MATCHES : user_a
+  USERS ||--o{ MATCHES : user_b
+  MATCHES ||--o{ MESSAGES : contains
+  MESSAGES ||--o{ MESSAGE_REACTIONS : has
+  USERS ||--o{ SUBSCRIPTIONS : purchases
+  USERS ||--o{ REPORTS : reports
+  USERS ||--o{ NOTIFICATIONS : receives
+  USERS ||--o{ DEVICE_TOKENS : registers
+  USERS ||--o{ AUDIT_LOGS : performs
+  INTERESTS ||--o{ USER_INTERESTS : selected
+  USERS ||--o{ USER_INTERESTS : has
+  USERS ||--|| COMPATIBILITY_PROFILES : summarized

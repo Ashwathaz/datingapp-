@@ -1,0 +1,22 @@
+{
+  "name": "soulsync-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Production-grade verified dating platform monorepo",
+  "scripts": {
+    "dev:backend": "npm --prefix apps/backend run start:dev",
+    "dev:admin": "npm --prefix apps/admin run dev",
+    "test:backend": "npm --prefix apps/backend test",
+    "test:ai": "pytest apps/ai-service/tests",
+    "lint": "npm --prefix apps/backend run lint && npm --prefix apps/admin run lint"
+  },
+  "workspaces": [
+    "apps/backend",
+    "apps/admin"
+  ],
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}
+

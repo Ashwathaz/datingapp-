@@ -1,0 +1,13 @@
+backend:
+  image: ghcr.io/example/soulsync-backend:latest
+  replicas: 3
+aiService:
+  image: ghcr.io/example/soulsync-ai-service:latest
+  replicas: 2
+admin:
+  image: ghcr.io/example/soulsync-admin:latest
+  replicas: 2
+ingress:
+  apiHost: api.soulsync.example
+  adminHost: admin.soulsync.example
+
