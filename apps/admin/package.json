@@ -9,11 +9,11 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^6.0.2",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite": "^5.3.1"
+    "vite": "^8.0.16"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -24,4 +24,3 @@
     "typescript": "^5.4.5"
   }
 }
-

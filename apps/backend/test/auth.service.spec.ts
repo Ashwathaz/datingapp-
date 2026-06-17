@@ -78,7 +78,7 @@ describe('AuthService', () => {
 
     expect(db.query.mock.calls.some(([sql]) => sql.includes('insert into auth_sessions'))).toBe(true);
     expect(db.query.mock.calls.some(([sql, params]) => (
-      sql.includes('update auth_sessions') && params?.[0] === 'old-session-id' && Boolean(params[1])
+      sql.includes('update auth_sessions') && params?.[0] === 'old-session-id' && Boolean(params?.[1])
     ))).toBe(true);
   });
 });

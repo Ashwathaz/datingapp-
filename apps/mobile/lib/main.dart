@@ -4,7 +4,6 @@ import 'core/api_client.dart';
 import 'features/auth/auth_screen.dart';
 import 'features/chat/chat_screen.dart';
 import 'features/discovery/discovery_screen.dart';
-import 'features/onboarding/onboarding_screen.dart';
 import 'features/profile/profile_screen.dart';
 import 'features/verification/verification_screen.dart';
 
@@ -66,4 +65,3 @@ class _AppHomeState extends ConsumerState<AppHome> {
     );
   }
 }
-
